@@ -55,6 +55,7 @@ public class UserWebController {
     // 顯示編輯表單
     @GetMapping("/{id}/edit")
     public String showEditForm(@PathVariable String id, Model model) {
+        int a=1;
         return userService.getUserById(id)
                 .map(user -> {
                     model.addAttribute("user", user);
